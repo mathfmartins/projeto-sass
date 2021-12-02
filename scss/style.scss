@@ -5,12 +5,20 @@ $dark-grey: #464646;
 $yellow: #fade50;
 $img_width: 45%;
 
+// placeholder selector
 %no-decoration {
   text-decoration: none;
 }
 
 %decoration {
   text-decoration: underline;
+}
+
+// mixin
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -194,9 +202,7 @@ $img_width: 45%;
     }
 
     &__posts {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      @include reset-list;
     }
 
     &__list {
