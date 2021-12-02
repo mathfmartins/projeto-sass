@@ -1,3 +1,11 @@
+.main .sidebar__post-title {
+  text-decoration: none;
+}
+
+.main .sidebar__post-title:hover {
+  text-decoration: underline;
+}
+
 .header {
   font-family: Arial, Helvetica, sans-serif;
 }

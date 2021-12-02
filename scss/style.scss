@@ -4,6 +4,15 @@ $light-grey: #eaeaeb;
 $dark-grey: #464646;
 $yellow: #fade50;
 $img_width: 45%;
+
+%no-decoration {
+  text-decoration: none;
+}
+
+%decoration {
+  text-decoration: underline;
+}
+
 .header {
   font-family: Arial, Helvetica, sans-serif;
 
@@ -214,6 +223,11 @@ $img_width: 45%;
     &__post-title {
       color: $purple;
       font-size: 14px;
+      @extend %no-decoration;
+
+      &:hover {
+        @extend %decoration;
+      }
     }
 
     &__post-date {
