@@ -45,8 +45,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .main__content {
-  width: 70%;
+  width: 60%;
   padding: 40px 8px;
+  margin: 0;
 }
 .main__post {
   margin: 0 auto;
@@ -93,7 +94,7 @@
   padding: 40px 0 25px;
 }
 .main__btn {
-  background-color: #FADE50;
+  background-color: #fade50;
   color: purple;
   font-size: 16px;
   letter-spacing: 1.5;
@@ -102,7 +103,7 @@
   transition: 0.3s;
 }
 .main__btn:hover {
-  color: #FADE50;
+  color: #fade50;
   background-color: #a050be;
 }
 .main__info {
@@ -133,6 +134,51 @@
 }
 .main__a:hover {
   color: #a050be;
+}
+.main__sidebar {
+  width: 30%;
+  padding: 40px 10px;
+}
+.main .sidebar__top {
+  border: 1px solid #eaeaeb;
+  padding: 15px 20px;
+}
+.main .sidebar__title {
+  background-color: #fade50;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+.main .sidebar__posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main .sidebar__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 0;
+}
+.main .sidebar__list:not(:last-child) {
+  border-bottom: 1px dashed #eaeaeb;
+}
+.main .sidebar__img {
+  max-width: 40%;
+}
+.main .sidebar__details {
+  max-width: 50%;
+  padding-left: 10px;
+}
+.main .sidebar__post-title {
+  color: #a050be;
+  font-size: 14px;
+}
+.main .sidebar__post-date {
+  font-size: 12px;
+  margin: 5px 0 0 0;
 }
 
 .about {
