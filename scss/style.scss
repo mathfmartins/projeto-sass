@@ -44,9 +44,17 @@ $img_width: 45%;
   }
 }
 
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+  font-size: calculateRem($size)
+}
+
 .header {
   font-family: Arial, Helvetica, sans-serif;
-
+  
   &__logo {
     text-align: center;
   }
@@ -135,7 +143,7 @@ $img_width: 45%;
 
   &__title {
     text-decoration: none;
-    font-size: 22px;
+    @include fontSize(22px);
     color: $dark-grey;
     &:hover {
       color: $purple;
@@ -303,7 +311,7 @@ $img_width: 45%;
 
   &__h1 {
     color: $dark-grey;
-    font-size: 22px;
+    @include fontSize(22px);
     letter-spacing: 1px;
     margin: 5px 0px 10px 0px;
   }

@@ -92,7 +92,7 @@
 }
 .main__title {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #464646;
 }
 .main__title:hover {
@@ -234,7 +234,7 @@
 }
 .about__h1 {
   color: #464646;
-  font-size: 22px;
+  font-size: 1.375rem;
   letter-spacing: 1px;
   margin: 5px 0px 10px 0px;
 }
