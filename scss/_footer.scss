@@ -1,0 +1,18 @@
+.footer {
+  bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 50%;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  transform: translateX(-50%);
+
+  &__logo {
+    max-width: 100px;
+  }
+
+  &__txt {
+    font-size: 14px;
+    margin: auto;
+  }
+}
