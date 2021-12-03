@@ -21,10 +21,8 @@ $layout-margin-size: 10px;
   %no-margin-#{$direction} { margin-#{$direction}: 0px;}
   %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
   %double-margin-#{$direction} { margin-#{$direction}: $layout-margin-size * 2;}
-  %half-margin-#{$direction} { margin-#{$direction}: $layout-margin-size / 2; }
+  // %half-margin-#{$direction} { margin-#{$direction}: $layout-margin-size / 2; }
 }
-
-
 
 @mixin reset-list {
   list-style: none;
@@ -56,14 +54,14 @@ $layout-margin-size: 10px;
 }
 
 @function calculateRem($size) {
-    @return $size / 16px * 1rem;
+    @return calc($size / 16px) * 1rem;
 }
 
 @mixin fontSize($size) {
   font-size: calculateRem($size)
 }
 
-@import 'header', 'about', 'article', 'footer';
+@import 'header', 'about', 'article', 'collection', 'footer';
 
 .main {
   display: flex;
