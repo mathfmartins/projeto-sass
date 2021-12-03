@@ -13,6 +13,19 @@ $img_width: 45%;
 %decoration {
   text-decoration: underline;
 }
+
+$directions: top, right, bottom, left;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+  %no-margin-#{$direction} { margin-#{$direction}: 0px;}
+  %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+  %double-margin-#{$direction} { margin-#{$direction}: $layout-margin-size * 2;}
+  %half-margin-#{$direction} { margin-#{$direction}: $layout-margin-size / 2; }
+}
+
+
+
 @mixin reset-list {
   list-style: none;
   margin: 0;
@@ -87,12 +100,11 @@ $img_width: 45%;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    @extend %default-margin-top, %double-margin-bottom;
   }
 
   &__date {
-    margin: 0 10px;
+    @extend %no-margin-top, %default-margin-left, %no-margin-bottom, %default-margin-right;
     font-size: 12px;
     font-style: italic;
   }
@@ -101,7 +113,7 @@ $img_width: 45%;
     border: 1px solid $purple;
     color: $purple;
     font-size: 14px;
-    margin: 0 10px;
+    @extend %no-margin-top, %default-margin-left, %no-margin-bottom, %default-margin-right;
     padding: 5px 7px;
   }
 
