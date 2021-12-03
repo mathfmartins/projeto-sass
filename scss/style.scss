@@ -1,3 +1,4 @@
+@use 'sass:math';
 ///Estás variáveis se referem as cores principais do nosso blog.
 $purple: #a050be;
 $light-grey: #eaeaeb;
@@ -21,7 +22,7 @@ $layout-margin-size: 10px;
   %no-margin-#{$direction} { margin-#{$direction}: 0px;}
   %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
   %double-margin-#{$direction} { margin-#{$direction}: $layout-margin-size * 2;}
-  // %half-margin-#{$direction} { margin-#{$direction}: $layout-margin-size / 2; }
+  %half-margin-#{$direction} { margin-#{$direction}: math.div($layout-margin-size, 2); }
 }
 
 @mixin reset-list {
